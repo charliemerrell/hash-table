@@ -20,8 +20,8 @@ class HashTable {
     }
 
     getIndex(key) {
-        const hashAsNumber = parseInt(this.hash(key), 10);
-        return hashAsNumber % this.arrayLength;
+        const hashAsNumber = parseInt(this.hash(key), 16);
+        return hashAsNumber % this.buckets.length;
     }
 }
 

@@ -12,9 +12,11 @@ describe("basic tests", () => {
         const table = new HashTable();
         table.set("blah", 5);
     });
-    it("should recover set data", () => {
+    it("should recover correct set data", () => {
         const table = new HashTable();
-        table.set("blah", 5);
-        expect(table.get("blah")).toBe(5);
+        table.set("blah", "0798432408");
+        table.set("foo", "9999999999");
+        table.set("aaa", "1111111111");
+        expect(table.get("blah")).toBe("0798432408");
     });
 });
